@@ -10,13 +10,8 @@ import java.time.Duration;
 @Setter
 public class CalculoHora implements CalculoTotal {
 
-    //private BigDecimal VALOR_HORA;
     public static BigDecimal VALOR_HORA = new BigDecimal("2.00");
 
-
-//    public void CalculoHora(BigDecimal valor){
-//        this.VALOR_HORA = valor;
-//    }
     @Override
     public BigDecimal Obtemtotal(Duration intervalo) {
         return VALOR_HORA.multiply(new BigDecimal(intervalo.toHours()));

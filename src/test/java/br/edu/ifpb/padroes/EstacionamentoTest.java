@@ -7,29 +7,22 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 import br.edu.ifpb.padroes.estrategy.*;
-import br.edu.ifpb.padroes.estrategy.CalculoTotal;
 import static br.edu.ifpb.padroes.estrategy.CalculoHora.*;
 import static br.edu.ifpb.padroes.estrategy.CalculoDiaria.*;
 import static br.edu.ifpb.padroes.estrategy.CalculoMensal.*;
-//import br.edu.ifpb.padroes.Estacionamento;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EstacionamentoTest {
 
     private Estacionamento estacionamento = new Estacionamento();
-    private CalculoHora calculoHora = new CalculoHora();
-    private CalculoDiaria calculoDiaria = new CalculoDiaria();
-    private CalculoMensal calculoMensal = new CalculoMensal();
-
 
     @Test
     public void obterTotalAPagarTeste_hora() {
         LocalDateTime entrada = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
         LocalDateTime saida = LocalDateTime.of(2021, 1, 1, 11, 0, 0);
         Veiculo veiculo = new Veiculo("ABC-123",  "Chevrolet Onix", "Azul");
-        CalculoHora calculoDaHora = new CalculoHora();
-        calculoDaHora.setVALOR_HORA();
         estacionamento.setEntrada(entrada);
         estacionamento.setSaida(saida);
         estacionamento.setVeiculo(veiculo);
