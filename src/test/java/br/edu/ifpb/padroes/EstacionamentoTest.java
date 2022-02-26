@@ -6,11 +6,11 @@ import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-import br.edu.ifpb.padroes.estrategy.*;
+import static br.edu.ifpb.padroes.Estacionamento.*;
+
 import static br.edu.ifpb.padroes.estrategy.CalculoHora.*;
 import static br.edu.ifpb.padroes.estrategy.CalculoDiaria.*;
 import static br.edu.ifpb.padroes.estrategy.CalculoMensal.*;
-
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -46,8 +46,8 @@ public class EstacionamentoTest {
 
     @Test
     public void obterTotalAPagarTeste_mensalidade() {
-        LocalDateTime entrada = LocalDateTime.of(2021, 1, 17, 0, 0, 0);
-        LocalDateTime saida = LocalDateTime.of(2021, 3, 1, 0, 0, 0);
+        LocalDateTime entrada = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
+        LocalDateTime saida = LocalDateTime.of(2021, 3, 17, 0, 0, 0);
         Veiculo veiculo = new Veiculo("ABC-123",  "Chevrolet Onix", "Azul");
         estacionamento.setEntrada(entrada);
         estacionamento.setSaida(saida);

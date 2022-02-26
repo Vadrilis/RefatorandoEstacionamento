@@ -18,7 +18,7 @@ public class Estacionamento {
     private Veiculo veiculo;
 
     private CalculoTotal calculopadrao;
-    private Factory factory;
+    private Factory factory = new Factory();
 
     public BigDecimal obterTotalAPagar() {
 
